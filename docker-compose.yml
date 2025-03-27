@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   cyberflix-server:
     build: .
@@ -6,6 +5,6 @@ services:
     env_file:
       - .env
     ports:
-      - "8000:8000"
+      - "2075:2075"
 
-    command: ["gunicorn", "-t", "600", "-b", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker", "run:app"]
+    command: ["gunicorn", "-t", "600", "-b", "0.0.0.0:2075", "-k", "uvicorn.workers.UvicornWorker", "run:app"]
